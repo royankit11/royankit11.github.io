@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ankit Roy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -16,6 +17,7 @@
     body {
       font-family: 'Inter', sans-serif;
       color: white;
+      line-height: 1.6;
     }
 
     /* --- Navigation --- */
@@ -23,55 +25,72 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.8);
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
       z-index: 1000;
+      backdrop-filter: blur(5px);
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      letter-spacing: 1px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
-      color: orange;
+      color: #FFA500;
+      transform: translateY(-2px);
     }
 
     /* --- Hero Section --- */
     .hero {
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://wallpapersok.com/images/hd/stunning-scenic-view-of-mountain-landscape-no415mxfcsjntnb5.jpg') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 0 2rem;
     }
 
     .hero h1 {
       font-size: 4rem;
       font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-top: 0.5rem;
+      max-width: 700px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     .icons {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
     }
 
     .icons a {
       color: white;
-      margin: 0 0.5rem;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .icons a:hover {
+      color: #FFA500;
+      transform: translateY(-3px);
     }
 
     .scroll-down {
@@ -79,32 +98,249 @@
       bottom: 2rem;
       font-size: 2rem;
       color: white;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
     }
 
     /* --- Sections --- */
     section {
-      padding: 4rem 2rem;
-      max-width: 800px;
+      padding: 6rem 2rem;
+      max-width: 900px;
       margin: auto;
       background: white;
       color: #333;
     }
 
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
       color: #2c3e50;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #FFA500;
     }
 
     ul {
       padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* About Section */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #e0e0e0;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #FFA500;
+      border-radius: 50%;
+      top: 15px;
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+
+    .timeline-content {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-date {
+      color: #FFA500;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+
+    .timeline-desc {
+      color: #666;
+    }
+
+    /* Projects */
+    .project {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title a {
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .project-title a:hover {
+      color: #FFA500;
+    }
+
+    .project-tech {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contact-link:hover {
+      color: #FFA500;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background: #f8f9fa;
-      color: #333;
+      padding: 3rem;
+      background: #2c3e50;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      nav {
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
+      
+      .timeline::before {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item::after {
+        left: 21px;
+      }
+      
+      .timeline-item:nth-child(odd)::after,
+      .timeline-item:nth-child(even)::after {
+        left: 21px;
+      }
     }
 
     /* Smooth anchor offset for fixed nav */
@@ -122,6 +358,7 @@
   <!-- Navbar -->
   <nav>
     <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
     <a href="#education">EDUCATION</a>
     <a href="#skills">SKILLS</a>
     <a href="#experience">EXPERIENCE</a>
@@ -132,65 +369,184 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <h1>Ankit Roy</h1>
-    <p>Machine Learning | iOS Developer | Researcher</p>
+    <p>Software Engineer | iOS Developer | ML Engineer</p>
     <div class="icons">
-      <a href="https://github.com/royankit11" target="_blank">🐙</a>
-      <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank">🔗</a>
-      <a href="mailto:royankit11@gmail.com">✉️</a>
+      <a href="https://github.com/royankit11" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:royankit11@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
     </div>
-    <div class="scroll-down">⬇️</div>
+    <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
   </section>
 
-  <!-- Content Sections -->
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p class="about-text">
+        Hi, I'm Ankit Roy, a passionate software engineer specializing in iOS development and machine learning. 
+        I'm currently pursuing my Computer Science degree at Georgia Tech with a perfect 4.0 GPA.
+      </p>
+      <p class="about-text">
+        My journey in technology began with a fascination for how things work, which evolved into building 
+        practical solutions that impact people's lives. As President of the GT iOS Club, I enjoy mentoring 
+        others and sharing my knowledge with the developer community.
+      </p>
+      <p class="about-text">
+        When I'm not coding, you can find me hiking, reading about emerging technologies, or experimenting 
+        with new programming frameworks. I believe in continuous learning and pushing the boundaries of 
+        what's possible with technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
   <section id="education">
     <h2>Education</h2>
     <p><strong>Georgia Institute of Technology</strong><br>
-      MS in Computer Science (Planned) — Aug 2026 – May 2027<br>
-      BS in Computer Science — Aug 2023 – May 2026<br>
+      <em>MS in Computer Science (Planned)</em> — Aug 2026 – May 2027<br>
+      <em>BS in Computer Science</em> — Aug 2023 – May 2026<br>
       GPA: 4.00<br>
       Relevant Coursework: Data Structures, Algorithms, AI, Systems, Linear Algebra<br>
-      President, GT iOS Club</p>
+      <strong>President</strong>, GT iOS Club</p>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Languages: Java, Python, JavaScript, Node.js, Swift</li>
-      <li>Technologies: Git, PostgreSQL, Docker, iOS, Android, TensorFlow</li>
-      <li>Concepts: Machine Learning, Retrieval-Augmented Generation, Agentic Design</li>
-    </ul>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+      <div>
+        <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Languages</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>Swift</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Technologies</h3>
+        <ul>
+          <li>Git</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>iOS/Android</li>
+          <li>TensorFlow</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Concepts</h3>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Retrieval-Augmented Generation</li>
+          <li>Agentic Design</li>
+          <li>Natural Language Processing</li>
+          <li>Computer Vision</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
+  <!-- Experience Section -->
   <section id="experience">
     <h2>Experience</h2>
-    <p><strong>Epic Systems</strong> — Software Developer Intern (May 2025 – Present)<br>
-      Building a Conversational AI assistant for clinicians using C# and agentic design.</p>
-
-    <p><strong>Sutherland Global</strong> — Software Engineer Intern (May 2024 – Aug 2024)<br>
-      Created a custom VS Code extension with AI features using Node.js and Docker.</p>
-
-    <p><strong>University of Connecticut</strong> — Research Intern (May 2021 – Sep 2021)<br>
-      Built a ML model to predict SIP in infants, used by 300+ doctors.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">May 2025 - Present</div>
+          <h3 class="timeline-title">Software Developer Intern - Epic Systems</h3>
+          <p class="timeline-desc">
+            Building a Conversational AI assistant for clinicians using C# and agentic design. 
+            Implementing natural language processing to understand medical queries and provide 
+            accurate responses from patient records.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">May 2024 - Aug 2024</div>
+          <h3 class="timeline-title">Software Engineer Intern - Sutherland Global</h3>
+          <p class="timeline-desc">
+            Created a custom VS Code extension with AI features using Node.js and Docker. 
+            The extension analyzes code patterns and suggests optimizations, used by 50+ 
+            internal developers to improve productivity.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">May 2021 - Sep 2021</div>
+          <h3 class="timeline-title">Research Intern - University of Connecticut</h3>
+          <p class="timeline-desc">
+            Built a machine learning model to predict SIP in infants, used by 300+ doctors. 
+            Implemented data preprocessing pipelines and visualization tools to help clinicians 
+            interpret model predictions.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <p><strong><a href="https://github.com/royankit11/CodeBuddy">Code Buddy</a></strong><br>
-      IDE extension using LLMs and Retrieval-Augmented Generation with Chroma DB and Docker.</p>
-
-    <p><strong><a href="https://github.com/royankit11/Nomad">Nomad</a></strong><br>
-      AI-powered road trip planner with voice assistant and route optimization. Built in Swift/iOS.</p>
+    <div class="project">
+      <h3 class="project-title"><a href="https://github.com/royankit11/CodeBuddy">Code Buddy</a></h3>
+      <p class="project-tech">Node.js | Docker | Chroma DB | LLMs</p>
+      <p>
+        IDE extension using LLMs and Retrieval-Augmented Generation with Chroma DB and Docker. 
+        Provides contextual code suggestions by analyzing both the current project and similar 
+        open-source projects.
+      </p>
+    </div>
+    <div class="project">
+      <h3 class="project-title"><a href="https://github.com/royankit11/Nomad">Nomad</a></h3>
+      <p class="project-tech">Swift | iOS | Core ML | MapKit</p>
+      <p>
+        AI-powered road trip planner with voice assistant and route optimization. Integrates with 
+        weather APIs and points of interest to create personalized itineraries based on user preferences.
+      </p>
+    </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:royankit11@gmail.com">royankit11@gmail.com</a></p>
-    <p>Phone: +1 860 712 2969</p>
-    <p><a href="https://www.linkedin.com/in/ankit-roy11">LinkedIn</a> | <a href="https://github.com/royankit11">GitHub</a></p>
+    <div class="contact-info">
+      <a href="mailto:royankit11@gmail.com" class="contact-link">
+        <i class="fas fa-envelope"></i> royankit11@gmail.com
+      </a>
+      <a href="tel:+18607122969" class="contact-link">
+        <i class="fas fa-phone"></i> +1 860 712 2969
+      </a>
+      <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin-in"></i> linkedin.com/in/ankit-roy11
+      </a>
+      <a href="https://github.com/royankit11" target="_blank" class="contact-link">
+        <i class="fab fa-github"></i> github.com/royankit11
+      </a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Ankit Roy</p>
+    <p>© 2025 Ankit Roy. All rights reserved.</p>
+    <div style="margin-top: 1rem;">
+      <a href="#home" style="color: white; text-decoration: none; margin: 0 0.5rem;"><i class="fas fa-arrow-up"></i> Back to Top</a>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scrolling for all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
