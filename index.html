@@ -53,44 +53,13 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+
   <section id="skills" class="bg-light">
-    <div class="section-container">
-      <h2>Skills</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-        <div>
-          <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Languages</h3>
-          <ul>
-            <li>Java</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>Node.js</li>
-            <li>Swift</li>
-          </ul>
-        </div>
-        <div>
-          <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Technologies</h3>
-          <ul>
-            <li>Git</li>
-            <li>PostgreSQL</li>
-            <li>Docker</li>
-            <li>iOS/Android</li>
-            <li>TensorFlow</li>
-          </ul>
-        </div>
-        <div>
-          <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Concepts</h3>
-          <ul>
-            <li>Machine Learning</li>
-            <li>Retrieval-Augmented Generation</li>
-            <li>Agentic Design</li>
-            <li>Natural Language Processing</li>
-            <li>Computer Vision</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="section-container">
+    <h2>Skills</h2>
+    <div id="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;"></div>
+  </div>
+</section>
 
  
 
@@ -462,6 +431,68 @@ Algorithms, Systems and Networks, Artificial Intelligence<br>
         video.src = '';
       }
     });
+
+      // Skill data with proficiency (0-5)
+  const skillsData = {
+    "Languages": [
+      { name: "Java", proficiency: 4 },
+      { name: "Python", proficiency: 4 },
+      { name: "Swift", proficiency: 4 },
+      { name: "JavaScript", proficiency: 3 },
+      { name: "Node.js", proficiency: 3 }
+    ],
+    "Technologies": [
+      { name: "Git", proficiency: 4 },
+      { name: "iOS/Android", proficiency: 4 },
+      { name: "PostgreSQL", proficiency: 3 },
+      { name: "Docker", proficiency: 3 },
+      { name: "TensorFlow", proficiency: 2 }
+    ],
+    "Concepts": [
+      { name: "Machine Learning", proficiency: 4 },
+      { name: "Retrieval-Augmented Generation", proficiency: 3 },
+      { name: "Agentic Design", proficiency: 3 },
+    ]
+  };
+
+  const skillsGrid = document.getElementById('skills-grid');
+
+  // Function to create proficiency circles
+  function createProficiencyCircles(level) {
+    const container = document.createElement('span');
+    container.className = 'proficiency';
+    for (let i = 1; i <= 5; i++) {
+      const circle = document.createElement('span');
+      circle.className = 'circle' + (i <= level ? ' filled' : '');
+      container.appendChild(circle);
+    }
+    return container;
+  }
+
+  // Render all skills
+  for (const category in skillsData) {
+    const div = document.createElement('div');
+    const h3 = document.createElement('h3');
+    h3.style.color = '#2c3e50';
+    h3.style.marginBottom = '0.5rem';
+    h3.textContent = category;
+    div.appendChild(h3);
+
+    const ul = document.createElement('ul');
+    ul.style.listStyle = 'none';
+    ul.style.paddingLeft = '0';
+
+    skillsData[category].forEach(skill => {
+      const li = document.createElement('li');
+      li.style.marginBottom = '0.6rem';
+      li.textContent = skill.name;
+      li.appendChild(createProficiencyCircles(skill.proficiency));
+      ul.appendChild(li);
+    });
+
+    div.appendChild(ul);
+    skillsGrid.appendChild(div);
+  }
 
   </script>
 </body>

@@ -122,6 +122,14 @@
     width: 100%;
   }
 
+  #experience {
+  padding-bottom: 1rem;
+}
+
+#education{
+  padding-top: 1rem;
+}
+
   .section-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -194,6 +202,28 @@
     font-size: 1.1rem;
     line-height: 1.7;
   }
+
+  .proficiency {
+    margin-left: 0.75rem;
+    display: inline-flex;
+    gap: 4px;
+    vertical-align: middle;
+  }
+  .circle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent; /* empty circles are transparent */
+  border: 2px solid #bbb;         /* light gray outline */
+  box-sizing: border-box;         /* ensure border doesn’t increase size */
+  transition: background-color 0.3s ease;
+}
+
+.circle.filled {
+  background-color: #2c3e50;      /* filled circles get solid fill */
+  border-color: #2c3e50;          /* border color matches fill */
+}
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
