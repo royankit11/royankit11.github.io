@@ -25,11 +25,10 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Ankit Roy</h1>
-      <p>Software Engineer | iOS Developer | ML Engineer</p>
+      <p>Software Engineer | iOS Developer | AI/ML Engineer</p>
       <div class="icons">
         <a href="https://github.com/royankit11" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:royankit11@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
       <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
     </div>
@@ -41,7 +40,7 @@
       <h2>About Me</h2>
       <div class="about-content">
         <div class="profile-pic-container">
-          <img src="profile-pic.jpg" alt="Ankit Roy" class="profile-pic" />
+          <img src="media/profile-pic.jpg" alt="Ankit Roy" class="profile-pic" />
         </div>
         <div class="about-text-container">
           <p class="about-text">
@@ -210,56 +209,168 @@ Algorithms, Systems and Networks, Artificial Intelligence<br>
   
 
   <!-- Projects Section -->
-  <section id="projects" class="bg-light">
-    <div class="section-container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <h3 class="project-title"><a href="https://github.com/royankit11/CodeBuddy">Code Buddy</a></h3>
-          <p class="project-tech">Node.js | Docker | Chroma DB | LLMs</p>
-          <p>
-            IDE extension using LLMs and Retrieval-Augmented Generation with Chroma DB and Docker. 
-            Provides contextual code suggestions by analyzing both the current project and similar 
-            open-source projects. Supports 10+ languages with 85% accuracy in suggestion relevance.
-          </p>
-        </div>
-        <div class="project">
-          <h3 class="project-title"><a href="https://github.com/royankit11/Nomad">Nomad</a></h3>
-          <p class="project-tech">Swift | iOS | Core ML | MapKit</p>
-          <p>
-            AI-powered road trip planner with voice assistant and route optimization. Integrates with 
-            weather APIs and points of interest to create personalized itineraries based on user preferences.
-            Featured in App Store's "New Apps We Love" with 50,000+ downloads in first month.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="projects" class="bg-light">
+  <div class="section-container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-white">
-    <div class="section-container">
-      <h2>Contact</h2>
-      <div class="contact-info">
-        <a href="mailto:royankit11@gmail.com" class="contact-link">
-          <i class="fas fa-envelope contact-icon"></i>
-          <span>royankit11@gmail.com</span>
-        </a>
-        <a href="tel:+18607122969" class="contact-link">
-          <i class="fas fa-phone contact-icon"></i>
-          <span>+1 860 712 2969</span>
-        </a>
-        <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank" class="contact-link">
-          <i class="fab fa-linkedin-in contact-icon"></i>
-          <span>linkedin.com/in/ankit-roy11</span>
-        </a>
-        <a href="https://github.com/royankit11" target="_blank" class="contact-link">
-          <i class="fab fa-github contact-icon"></i>
-          <span>github.com/royankit11</span>
-        </a>
+
+      <div class="project"
+        data-title="Code Buddy"
+        data-tech="Node.js | Chroma DB | Postgres | Ollama | Docker"
+        data-type="youtube"
+        data-src="https://www.youtube.com/embed/nmvO5BNA6KE"
+        data-description="Code Buddy is an IDE extension that harnesses LLMs to streamline developer workflows.
+        I engineered a Retrieval-Augmented Generation framework using Chroma DB as the vector database, and 
+        constructed a modelfile to create custom Ollama models."
+        data-github="https://github.com/royankit11/CodeBuddy"
+        data-external="">
+
+        <img src="media/code-buddy-logo.png" class="project-logo" />
+        <div class="project-overlay">
+          <h3>Code Buddy</h3>
+          <!-- <p class="project-tech">Node.js | Chroma DB | Postgres | Ollama</p> -->
+          <p class="project-tech">A VSCode extension that leverages LLM models to assist in the coding experience and enhance productivity</p>
+        </div>
+      </div>
+
+      <div class="project"
+        data-title="Nomad"
+        data-tech="Swift | SwiftUI | OpenAI | MapKit"
+        data-type="youtube"
+        data-src="https://www.youtube.com/embed/CEB4jRgEqTU"
+        data-description="Nomad is an AI-powered road trip app that curates, plans efficient routes, and streamlines travel decision-making for unforgettable adventures.
+        The app features Atlas, an AI voice assistant that personalizes road trip experiences 
+        by optimizing routes and suggesting stops based on user preferences."
+        data-github="https://github.com/royankit11/Nomad"
+        data-external="https://devpost.com/software/nomad-upom60">
+
+        <img src="media/nomad-logo.png" class="project-logo" />
+
+       <div class="project-overlay">
+        <h3>Nomad</h3>
+          <p class="project-tech"> Your ultimate road trip companion for seamless planning, smart navigation, AI-powered help, and unforgettable memories</p>
+        </div>
+      
+      </div>
+
+      <div class="project"
+        data-title="Cultured"
+        data-tech="Swift | SwiftUI | ARKit | Firebase"
+        data-type="youtube"
+        data-src="https://www.youtube.com/embed/gERhjLdaQT4"
+        data-description="Cultured offers users an immersive exploration of global cultures through interactive games, quizzes, 
+        and augmented reality tours. Using augmented reality, it brings cultural landmarks to life, allowing users to experience them from the comfort of their own home."
+        data-github="https://github.com/royankit11/Cultured"
+        data-external="https://devpost.com/software/cultured-zr06nf">
+        <img src="media/cultured-logo.png" class="project-logo" />
+
+        <div class="project-overlay">
+          <h3>Cultured</h3>
+          <p class="project-tech">
+           An educational app that connects users with their own or other cultures through games, quizzes, and AR tours</p>
+        </div>
+       
+      </div>
+
+      <div class="project"
+        data-title="Keepsake"
+        data-tech="Swift | SwiftUI | OpenAI | RealityKit | ARKit"
+        data-type="youtube"
+        data-src="https://www.youtube.com/embed/6nq0sTNF89w"
+        data-description="Keepsake is a modern journaling and scrapbooking app that makes memory-keeping effortless and engaging through AI and AR. 
+        Users can enrich entries with AI prompts, voice memos, photos, and chatbot conversations,
+         while ARKit enables immersive 3D scrapbooking. With real-time collaboration, Apple Watch integration, and a creative community, Keepsake redefines personal documentation."
+        data-github="https://github.com/royankit11/Keepsake"
+        data-external="https://devpost.com/software/keepsake-dw36fx">
+
+        <img src="media/KeepsakeIcon.png" class="project-logo" />
+
+        <div class="project-overlay">
+          <h3>Keepsake</h3>
+          <p class="project-tech">
+           Bring your memories to life with augmented reality scrapbooks, AI-powered journals, and a Watch companion app</p>
+        </div>
+
+      </div>
+
+      <div class="project"
+        data-title="ShelfSense"
+        data-tech="React | Node.js | MongoDB | Express.js"
+        data-type="youtube"
+        data-src="https://www.youtube.com/embed/1a8XK-3xz6g"
+        data-description="ShelfSense is a smart kitchen assistant that helps reduce food waste by turning 
+        leftover ingredients into personalized recipes. Users can speak their pantry contents, and ShelfSense suggests meals, tracks ingredient freshness, 
+        and emails recipes for future use, making home cooking more sustainable, creative, and efficient."
+        data-github="https://github.com/royankit11/ShelfSense"
+        data-external="https://devpost.com/software/shelfsense">
+
+        <img src="media/ShelfSenseIcon.png" class="project-logo" />
+
+        <div class="project-overlay">
+          <h3>ShelfSense</h3>
+          <p class="project-tech">
+          An intelligent assistant that turns pantry ingredients into meals, reducing waste and inspiring creativity</p>
+        </div>
+
       </div>
     </div>
-  </section>
+  </div>
+
+  <div id="projectModal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    
+    <h3 id="modalTitle"></h3>
+    <p id="modalTech" class="modal-tech"></p> <!-- Tech goes here -->
+
+    <div class="modal-media-container">
+      <iframe id="modalIframe" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <video id="modalVideo" controls>
+        Your browser does not support the video tag.
+      </video>
+      <img id="modalImage" alt="Project preview" />
+    </div>
+
+    <p id="modalDescription"></p>
+
+    <div class="modal-links">
+      <a id="modalGithub" href="#" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+      <a id="modalExternal" href="#" target="_blank" class="external-link"><i class="fas fa-external-link-alt"></i>Learn More</a>
+    </div>
+  </div>
+</div>
+</section>
+
+ <!-- Contact Section -->
+<section id="contact" class="bg-white">
+  <div class="section-container">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <a href="mailto:royankit11@gmail.com" class="contact-link">
+        <i class="fas fa-envelope contact-icon"></i>
+        <div class="contact-text">
+          <span>Email</span>
+          <small>royankit11@gmail.com</small>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/ankit-roy11" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin-in contact-icon"></i>
+        <div class="contact-text">
+          <span>LinkedIn</span>
+          <small>/in/ankit-roy11</small>
+        </div>
+      </a>
+      <a href="https://github.com/royankit11" target="_blank" class="contact-link">
+        <i class="fab fa-github contact-icon"></i>
+        <div class="contact-text">
+          <span>GitHub</span>
+          <small>/royankit11</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
   <footer>
     <p>© 2025 Ankit Roy. All rights reserved.</p>
@@ -271,14 +382,87 @@ Algorithms, Systems and Networks, Artificial Intelligence<br>
   <script>
     // Smooth scrolling for all links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+    
+    const modal = document.getElementById('projectModal');
+    const iframe = document.getElementById('modalIframe');
+    const video = document.getElementById('modalVideo');
+    const image = document.getElementById('modalImage');
+
+    document.querySelectorAll('.project').forEach(project => {
+  project.addEventListener('click', () => {
+    const modal = document.getElementById('projectModal');
+    const iframe = document.getElementById('modalIframe');
+    const video = document.getElementById('modalVideo');
+    const image = document.getElementById('modalImage');
+    const title = document.getElementById('modalTitle');
+    const description = document.getElementById('modalDescription');
+    const githubLink = document.getElementById('modalGithub');
+
+    const tech = document.getElementById('modalTech');
+    const externalLink = document.getElementById('modalExternal');
+
+    // Set title and description
+    title.textContent = project.dataset.title;
+    description.textContent = project.dataset.description;
+    githubLink.href = project.dataset.github;
+
+    tech.textContent = project.dataset.tech || '';
+    externalLink.href = project.dataset.external || '#';
+    externalLink.style.display = project.dataset.external ? 'inline-flex' : 'none';
+    // Hide all media elements first
+    iframe.style.display = 'none';
+    video.style.display = 'none';
+    image.style.display = 'none';
+
+    // Load media based on type
+    const type = project.dataset.type;
+    const src = project.dataset.src;
+
+    if (type === 'youtube') {
+      iframe.src = src;
+      iframe.style.display = 'block';
+    } 
+    else if (type === 'video') {
+      video.src = src;
+      video.style.display = 'block';
+      video.load(); // Force load the video
+    } 
+    else if (type === 'image') {
+      image.src = src;
+      image.style.display = 'block';
+      image.alt = project.dataset.title; // Improve accessibility
+    }
+
+    // Show the modal
+    modal.style.display = 'flex'; // Use flex to center
+  });
+});
+
+    document.querySelector('.modal-close').addEventListener('click', () => {
+      modal.style.display = 'none';
+      iframe.src = '';
+      video.pause();
+      video.src = '';
     });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        iframe.src = '';
+        video.pause();
+        video.src = '';
+      }
+    });
+
   </script>
 </body>
 </html>
