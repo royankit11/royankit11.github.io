@@ -475,6 +475,12 @@ li {
   font-style: italic;
 }
 
+.modal-tech {
+  font-size: 0.85em;
+  color: #8c8a8a;
+  font-style: italic;
+}
+
 /* Modal */
 .modal-overlay {
   display: none;
